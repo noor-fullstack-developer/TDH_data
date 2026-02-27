@@ -16,5 +16,5 @@ app.use(cors());
 app.use("/api/products", productRoutes);
 
 // This Start Server
-const Port = 4000;
-app.listen(Port , () => console.log(`Server running on http://localhost:${Port}/api/products`));
+const Port = 5000;
+app.listen(Port , () => console.log(`Server running on http://localhost:${Port}`));
