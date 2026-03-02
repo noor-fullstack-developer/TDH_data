@@ -24,7 +24,6 @@ exports.getProducts = async (req, res) => {
 exports.getProductById = async (req, res) => {
   const { id } = req.params;
 
-  // ✅ Prevent favicon.ico and invalid ObjectIds from crashing server
   if (!mongoose.Types.ObjectId.isValid(id)) {
     return res.status(400).json({ message: "Invalid product ID" });
   }
