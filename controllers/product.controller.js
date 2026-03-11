@@ -14,7 +14,7 @@ exports.createProduct = async (req, res) => {
 exports.getProducts = async (req, res) => {
   try {
     const products = await Product.find();
-    res.json(products);
+    res.json({ payload: product });
   } catch (error) {
     console.error(error);
     res.status(500).json({ message: "Failed to fetch products" });
@@ -35,7 +35,7 @@ exports.getProductById = async (req, res) => {
       return res.status(404).json({ message: "Product not found" });
     }
 
-    res.json(product);
+    res.json({ payload: product });
   } catch (error) {
     console.error(error);
     res.status(500).json({ message: "Failed to fetch product" });
@@ -58,7 +58,7 @@ exports.updateProduct = async (req, res) => {
       return res.status(404).json({ message: "Product not found" });
     }
 
-    res.json(product);
+    res.json({ payload: product });
   } catch (error) {
     console.error(error);
     res.status(500).json({ message: "Failed to update product" });
