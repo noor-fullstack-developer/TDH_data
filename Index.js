@@ -17,4 +17,4 @@ app.use("/api/products", productRoutes);
 
 // This Start Server
 const Port = process.env.PORT || 5000;
-app.listen(Port , () => console.log(`Server running on http://localhost:${Port}`));
+app.listen(Port , () => console.log(`Server running on http://localhost:${Port}/api/products`));
