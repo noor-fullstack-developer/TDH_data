@@ -14,7 +14,7 @@ exports.createProduct = async (req, res) => {
 exports.getProducts = async (req, res) => {
   try {
     const products = await Product.find();
-    res.json({ payload: product });
+    res.json({ payload: products });
   } catch (error) {
     console.error(error);
     res.status(500).json({ message: "Failed to fetch products" });
